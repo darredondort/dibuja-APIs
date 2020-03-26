@@ -7,7 +7,6 @@
   <title>Leaflet Demo</title>
 
   <script src="../../libraries/p5.min.js"></script>
-  <script src="../../libraries/mappa.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Overpass+Mono&display=swap" rel="stylesheet">
 
@@ -15,26 +14,37 @@
   <style>
     body {
       background-color: #191A1A;
-      margin: 0;
       text-align: center;
-      color: #21252B;
+      color: white;
     }
 
     h1, h2 {
+      position:relative;
       font-family: 'Overpass Mono', serif;
-      background: #E9E5DF;
+      background: 0;
       padding: 20 0;
-      margin:0;
+      margin: auto;
     }
 
     h1 {
-      color: #F06B4A;
+      color: white;
       font-size: 24px;
+      padding-top: 20px;
+
     }
     h2 {
-      color: #21252B;
+      color: white;
       font-size: 12px;
+    }
+    h2 a {
+      color: white;
       text-decoration: none;
+    }
+    h2 a:link {
+      color: white;
+    }
+    h2 a:hover {
+      color: yellow;
     }
   </style>
 
@@ -44,11 +54,9 @@
 
 <body>
   <script src="script.js"></script>
-  <!-- <h1>Incendios forestales en Bosque La Primavera de enero a abril 2019</h1> -->
-  <!-- <h2>Fuente: <a href="https://datos.jalisco.gob.mx/dataset/incendios-forestales-en-bosque-la-primavera-2019/resource/22a0553d-a518-44a1-a4f8" target="_blank">OPD Bosque La Primavera</a></h2> -->
+  <h1>covid-19 hoy</h1>
+  <h2>Fuente: <a href="https://github.com/novelcovid/api" target="_blank"> NovelCOVID / API</a></h2>
   <div id="canvasContainer"> </div>
-  <script type="text/javascript" src="../dibuja-data_clases.js"></script>
-
 
 </body>
 </html>
