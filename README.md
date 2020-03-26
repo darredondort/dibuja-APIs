@@ -31,3 +31,30 @@ Visualiza la información consultada de distintas APIs en la Web utilizando las 
 [PRÓXIMAMENTE]
 
 
+___
+
+## Uso
+
+Clona o descarga repositorio.
+```
+git clone https://github.com/tugaarredondo/dibuja-APIs.git
+```
+
+Cambia de directorio a la carpeta de *dibuja-APIs*.
+
+```
+cd dibuja-APIs
+```
+
+Corre un servidor local
+```
+http-server -p 8000
+```
+
+Explora los ejemplos en tu navegador: http://localhost:8000/
+____
+
+## Licencia
+
+[MIT © Diego Arredondo](../LICENSE)
+
