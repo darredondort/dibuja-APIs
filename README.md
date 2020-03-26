@@ -13,19 +13,19 @@ ___
 ### 0. Hola API
 Programa tus primeras llamadas a APIs en la web desde el navegador.
 
-- **0-0_hola_covidAPI**  [ [ código ]() ]
+- **0-0_hola_covidAPI**  [ [ código ](https://github.com/tugaarredondo/dibuja-APIs/tree/master/ejercicios/0-0_hola_covidAPI) ]
 
 
 ### 1. Visualiza datos de APIs desde el navegador
 Visualiza la información consultada de distintas APIs en la Web utilizando las librerías p5.js y mappa.js.
 
-- **1-0_mappa_leaflet_covid-API**  [ [ código ]() ]
-- **1-1_json-web_ISS-people**  [ [ código ]() ]
-- **1-2_api-dynamic-queries_ISS-map**  [ [ código ]() ]
-- **1-3_mappa_leaflet_geolocationAPI**  [ [ código ]() ]
-- **1-4_api-giphy**  [ [ código ]() ]
-- **1-5_api-userinput_openweather**  [ [ código ]() ]
-- **1-6_api-mercator_mapboxAPI-earthquake**  [ [ código ]() ]
+- **1-0_mappa_leaflet_covid-API**  [ [ código ](https://github.com/tugaarredondo/dibuja-APIs/tree/master/ejercicios/1-0_mappa_leaflet_covid-API) ]
+- **1-1_json-web_ISS-people**  [ [ código ](https://github.com/tugaarredondo/dibuja-APIs/tree/master/ejercicios/1-1_json-web_ISS-people) ]
+- **1-2_api-dynamic-queries_ISS-map**  [ [ código ](https://github.com/tugaarredondo/dibuja-APIs/tree/master/ejercicios/1-2_api-dynamic-queries_ISS-map) ]
+- **1-3_mappa_leaflet_geolocationAPI**  [ [ código ](https://github.com/tugaarredondo/dibuja-APIs/tree/master/ejercicios/1-3_mappa_leaflet_geolocationAPI) ]
+- **1-4_api-giphy**  [ [ código ](https://github.com/tugaarredondo/dibuja-APIs/tree/master/ejercicios/1-4_api-giphy) ]
+- **1-5_api-userinput_openweather**  [ [ código ](https://github.com/tugaarredondo/dibuja-APIs/tree/master/ejercicios/1-5_api-userinput_openweather) ]
+- **1-6_api-mercator_mapboxAPI-earthquake**  [ [ código ](https://github.com/tugaarredondo/dibuja-APIs/tree/master/ejercicios/1-6_api-mercator_mapboxAPI-earthquake) ]
 
 ### 2. Visualiza datos de APIs desde el servidor (node.js)
 [PRÓXIMAMENTE]
