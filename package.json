@@ -1,0 +1,32 @@
+{
+  "name": "dibuja-apis",
+  "version": "0.0.1",
+  "description": "aprende a interactuar con APIs en la Web y visualizar su información",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tugaarredondo/dibuja-APIs.git"
+  },
+  "keywords": [
+    "data",
+    "apis",
+    "api",
+    "rest",
+    "stream",
+    "datavis",
+    "p5js",
+    "mappajs"
+  ],
+  "author": "Diego Arredondo Ortiz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tugaarredondo/dibuja-APIs/issues"
+  },
+  "homepage": "https://github.com/tugaarredondo/dibuja-APIs#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

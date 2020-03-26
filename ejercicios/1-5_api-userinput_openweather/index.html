@@ -2,20 +2,35 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>8.6_p5.js_api_query_user_input</title>
+    <title>dibuja-APIs: 1-5</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
-
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono&display=swap" rel="stylesheet">
 
     <script type="text/javascript" src="sketch.js"></script>
 
-    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+    <style>
+      body {
+        padding: 0; margin: 0;
+        font-family: "Overpass Mono";
+      }
+      canvas {
+        vertical-align: top;
+      }
+      #submit {
+        font-family: "Overpass Mono";
+        margin-top:20px;
+      }
+
+      .input-box {
+        margin:20px;
+      }
+    </style>
   </head>
   <body>
 
-    <p>
-      City: <input id ="city" value="London" />
+    <p class="input-box">
+      City: <input id ="city" value="Guadalajara" />
       <br/>
       <button id="submit">submit</button>
     </p>

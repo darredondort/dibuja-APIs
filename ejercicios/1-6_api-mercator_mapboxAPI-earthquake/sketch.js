@@ -1,18 +1,17 @@
-// Daniel Shiffman
+// Based on Coding Challenge by Daniel Shiffman
 // http://codingtra.in
-// Coding Challenge #57: Mapping Earthquake Data
+// Coding Challenge #57: Ma Earthquake Data
 // Video: https://youtu.be/ZiYdOwOrGyc
+let mapimg;
 
-var mapimg;
+let clat = 0;
+let clon = 0;
 
-var clat = 0;
-var clon = 0;
+let ww = 1024;
+let hh = 512;
 
-var ww = 1024;
-var hh = 512;
-
-var zoom = 1;
-var earthquakes;
+let zoom = 1;
+let earthquakes;
 
 function preload() {
   // The clon and clat in this url are edited to be in the correct order.
@@ -27,7 +26,7 @@ function preload() {
       ww +
       'x' +
       hh +
-      '?access_token=pk.eyJ1IjoidHVnYWFycmVkb25kbyIsImEiOiJjazZmcTh3b3gyYmpiM2VxZmZ3aGZqa2llIn0.-CmjLNxPKVn0jo4F4d98eA'
+      '?access_token=MAPBOX_TOKEN'
   );
   // earthquakes = loadStrings('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.csv');
   earthquakes = loadStrings(
@@ -37,16 +36,16 @@ function preload() {
 
 function mercX(lon) {
   lon = radians(lon);
-  var a = (256 / PI) * pow(2, zoom);
-  var b = lon + PI;
+  let a = (256 / PI) * pow(2, zoom);
+  let b = lon + PI;
   return a * b;
 }
 
 function mercY(lat) {
   lat = radians(lat);
-  var a = (256 / PI) * pow(2, zoom);
-  var b = tan(PI / 4 + lat / 2);
-  var c = PI - log(b);
+  let a = (256 / PI) * pow(2, zoom);
+  let b = tan(PI / 4 + lat / 2);
+  let c = PI - log(b);
   return a * c;
 }
 
@@ -56,17 +55,17 @@ function setup() {
   imageMode(CENTER);
   image(mapimg, 0, 0);
 
-  var cx = mercX(clon);
-  var cy = mercY(clat);
+  let cx = mercX(clon);
+  let cy = mercY(clat);
 
-  for (var i = 1; i < earthquakes.length; i++) {
-    var data = earthquakes[i].split(/,/);
+  for (let i = 1; i < earthquakes.length; i++) {
+    let data = earthquakes[i].split(/,/);
     //console.log(data);
-    var lat = data[1];
-    var lon = data[2];
-    var mag = data[4];
-    var x = mercX(lon) - cx;
-    var y = mercY(lat) - cy;
+    let lat = data[1];
+    let lon = data[2];
+    let mag = data[4];
+    let x = mercX(lon) - cx;
+    let y = mercY(lat) - cy;
     // This addition fixes the case where the longitude is non-zero and
     // points can go off the screen.
     if (x < -width / 2) {
@@ -76,8 +75,8 @@ function setup() {
     }
     mag = pow(10, mag);
     mag = sqrt(mag);
-    var magmax = sqrt(pow(10, 10));
-    var d = map(mag, 0, magmax, 0, 180);
+    let magmax = sqrt(pow(10, 10));
+    let d = map(mag, 0, magmax, 0, 180);
     stroke(255, 0, 255);
     fill(255, 0, 255, 200);
     ellipse(x, y, d, d);
