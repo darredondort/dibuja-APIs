@@ -33,7 +33,7 @@ Visualiza la información consultada de distintas APIs en la Web utilizando las 
 
 ___
 
-## Uso
+## Instalación y uso
 
 Clona o descarga repositorio.
 ```
@@ -44,6 +44,11 @@ Cambia de directorio a la carpeta de *dibuja-APIs*.
 
 ```
 cd dibuja-APIs
+```
+
+Instala las dependencias del proyecto
+```
+npm install i
 ```
 
 Corre un servidor local
