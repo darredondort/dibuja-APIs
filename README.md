@@ -29,6 +29,8 @@ Visualiza la información consultada de distintas APIs en la Web utilizando las 
 
 ### 2. Visualiza datos de APIs desde el servidor (node.js)
 [PRÓXIMAMENTE]
+- **2-0_hola-node**
+- **2-1_tuit-stream**
 
 
 ___
@@ -62,4 +64,3 @@ ____
 ## Licencia
 
 [MIT © Diego Arredondo](../LICENSE)
-
