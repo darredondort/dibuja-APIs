@@ -2,7 +2,7 @@
 let data;
 let num;
 
-// Script adaptado del ejemplo de Google Sheets APIs:
+// Script adaptado de la guía de Google Sheets APIs:
 // "node.js quickstart"
 // https://developers.google.com/sheets/api/quickstart/nodejs
 

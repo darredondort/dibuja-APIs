@@ -28,7 +28,7 @@ Visualiza la información consultada de distintas APIs en la Web utilizando las 
 - **1-6_api-mercator_mapboxAPI-earthquake**  [ [ código ](https://github.com/tugaarredondo/dibuja-APIs/tree/master/ejercicios/1-6_api-mercator_mapboxAPI-earthquake) ]
 
 ### 2. Visualiza datos de APIs desde el servidor (node.js)
-- **2-0_node-serve**
+- **2-0_node-express**
 - **2-1_twit_search-tweets-json**
 - **2-2_twit_stream-json**
 - **2-3_tuit-stream-datavis** [PRÓXIMAMENTE]
