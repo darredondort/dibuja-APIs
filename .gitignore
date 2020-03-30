@@ -2,5 +2,5 @@
 node_modules/
 ejercicios/2-1_twit_search-tweets-json/config.js
 ejercicios/2-2_twit_stream-json/config.js
-ejercicios/2-4_gsheets-batchGet/credentials.json
-ejercicios/2-4_gsheets-batchGet/token.json
+ejercicios/2-4_gsheets_values-get/credentials.json
+ejercicios/2-4_gsheets_values-get/token.json
