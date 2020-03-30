@@ -57,13 +57,6 @@ Instala las dependencias del proyecto
 ```
 npm install i
 ```
-
-Corre un servidor local
-```
-http-server -p 8000
-```
-
-Explora los ejemplos en tu navegador: http://localhost:8000/
 ____
 
 ## Licencia

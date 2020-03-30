@@ -4,7 +4,8 @@
   "description": "aprende a interactuar con APIs en la Web y visualizar su información",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd ejercicios/2-4_gsheets_values-get/ && node index.js"
   },
   "repository": {
     "type": "git",
