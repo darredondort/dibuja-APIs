@@ -1,5 +1,5 @@
 // variables globales
-let query = 'trump';
+let query = 'covid';
 let data;
 let num;
 
@@ -35,23 +35,27 @@ function gotData(err, data, response) {
       let date = data[i].created_at;
       console.log(`screenName: @${screenName} \n Text: ${text} \n date: ${date} \n likes: ${likes} \n retweets: ${retweets} \n`);
     }
-    saveData();
+    console.log("saving this data:");
+    // console.log(data);
+    saveData(data);
   } else {
-    console.log("no se encontraton tweets..")
+    console.log("no se encontraron tweets..")
   }
 }
 
-function saveData() {
+function saveData(dataWrite) {
+  // console.log(dataWrite);
+  // declara una nueva variable con nuevo un objeto Date
   let timestamp = new Date();
-  let timestampPrint = timestamp.toLocaleString();
-  let timestampISO = timestamp.toISOString();
-  let timestampFile = timestampISO.replace(/\:/g, "-");
-  console.log(`La descarga has finalizado en ${timestampPrint}. Se descargaron ${num} tweets.`);
+  // en una nuevas variables separadas, guarda la fecha y hora en string
+  let localeDate = timestamp.toLocaleDateString().replace(/\//g, "-");
+  let localeTime = timestamp.toLocaleTimeString().replace(/\:/g, "-");
+  console.log(`La descarga has finalizado en ${localeDate}. Se descargaron ${num} tweets.`);
 
-  let json = JSON.stringify(data);
-    // console.log(json);
-  fs.writeFile(`${timestampFile}_${query}_tweets.json`, json, (err) => {
+  let json = JSON.stringify(dataWrite);
+  console.log(json);
+  fs.writeFile(`../data/${localeDate}_${localeTime}_${query}_tweets.json`, json, (err) => {
     if (err) throw err;
-    console.log(`Datos de ${num} tweets grabados en ${timestampFile}_${query}_tweets.json`);
+    console.log(`Datos de ${num} tweets grabados en ../data/${localeDate}_${localeTime}_${query}_tweets.json`);
   });
 }

@@ -2,5 +2,7 @@
 node_modules/
 ejercicios/2-1_twit_search-tweets-json/config.js
 ejercicios/2-2_twit_stream-json/config.js
-ejercicios/2-4_gsheets_values-get/credentials.json
-ejercicios/2-4_gsheets_values-get/token.json
+ejercicios/2-3_twit_trends-place-json/config.js
+ejercicios/2-4_gsheets_values-get-csv/credentials.json
+ejercicios/2-4_gsheets_values-get-csv/token.json
+ejercicios/data-local

@@ -95,24 +95,22 @@ function gotData(auth) {
     // console.log(json);
 
 
+    // declara una nueva variable con nuevo un objeto Date
     let timestamp = new Date();
-    let timestampPrint = timestamp.toLocaleString();
-    let timestampISO = timestamp.toISOString();
-    let timestampFile = timestampISO.replace(/\:/g, "-");
+    // en una nuevas variables separadas, guarda la fecha y hora en string
+    let localeDate = timestamp.toLocaleDateString().replace(/\//g, "-");
+    let localeTime = timestamp.toLocaleTimeString().replace(/\:/g, "-");
 
-
-
-
-    fs.writeFile(`${timestampFile}_gsheets.csv`, csv, (err) => {
-      if (err) throw err;
-      console.log(`Datos de ${data.length} registros grabados en ${timestampFile}_gsheets.json`);
-    });
+    // si existen datos en la respuesta, escribe archivo local .csv con datos
     if (rows.length) {
-      console.log(rows[0]);
-      console.log(rows[1]);
-      rows.map((row) => {
-        // console.log(row[0],row[1],row[2],row[3]);
-        // console.log(`${row[0]}, ${row[4]}`);
+      // console.log(rows[0]);
+      // console.log(rows[1]);
+      // rows.map((row) => {
+      //   // console.log(row[0],row[1],row[2],row[3]);
+      // });
+      fs.writeFile(`../data/${localeDate}_${localeTime}_gsheets.csv`, csv, (err) => {
+        if (err) throw err;
+        console.log(`Datos de ${data.length} registros grabados en data/${localeDate}_${localeTime}_gsheets.json`);
       });
     } else {
       console.log('No se encontraron datos.');

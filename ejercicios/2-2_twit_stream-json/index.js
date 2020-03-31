@@ -37,19 +37,20 @@ stream.on("tweet", function (tweet) {
 
 function endStream() {
   stream.stop();
+  // declara una nueva variable con nuevo un objeto Date
   let timestamp = new Date();
-  let timestampPrint = timestamp.toLocaleString();
-  let timestampISO = timestamp.toISOString();
-  let timestampFile = timestampISO.replace(/\:/g, "-");
-  console.log(`Stream detenido en ${timestampPrint} . Se descargaron ${data.length} tweets.`);
+  // en una nuevas variables separadas, guarda la fecha y hora en string
+  let localeDate = timestamp.toLocaleDateString().replace(/\//g, "-");
+  let localeTime = timestamp.toLocaleTimeString().replace(/\:/g, "-");
+  console.log(`Stream detenido en ${localeDate} . Se descargaron ${data.length} tweets.`);
 
   let streamedData = {};
   streamedData.statuses = data;
   // console.log(streamedData);
   let json = JSON.stringify(streamedData);
   // console.log(json);
-  fs.writeFile(`${timestampFile}_${query}_tweets.json`, json, (err) => {
+  fs.writeFile(`../data/${localeDate}_${localeTime}_tweets-stream.json`, json, (err) => {
     if (err) throw err;
-    console.log(`Datos de ${data.length} tweets grabados en ${timestampFile}_${query}_tweets.json`);
+    console.log(`Datos de ${data.length} tweets grabados en ../data/${localeDate}_${localeTime}_${query}_tweets-stream.json`);
   });
 }
