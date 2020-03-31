@@ -5,7 +5,6 @@ let num = 10; // definir límite máximo de tweets a descargar
 
 // importar el paquete fs para manipular el sistema de archivos local
 const fs = require('fs');
-console.log("Solicitando stream a Twitter...")
 let Twit = require('twit'); // importa el paquete Twit, una vez instalado desde npm
 let config = require('./config.js') //  importa objeto de autenticación con credenciales y tokens para Twitter
 let T = new Twit(config); // crea un nuevo objeto Twit, pasando como argumento el objeto de autenticación
@@ -17,6 +16,7 @@ let stream = T.stream('statuses/filter', { track: query })
 
 // arrancar stream y gestionar los datos de su respuesta
 stream.on("tweet", function (tweet) {
+  console.log("Solicitando stream a Twitter...")
   // console.log(tweet);
   // si aún no se ha llegado al límite máximo de tweets...
   if (data.length != num) {
