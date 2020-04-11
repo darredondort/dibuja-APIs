@@ -1,6 +1,6 @@
 // declara variables globales para llamar, recibir y manipular datos
-let place = "México"
-let query = '23424900';
+let place = "Global"
+let query = '1';
 let data;
 let dataJSON;
 let num;
