@@ -44,7 +44,7 @@ function saveData() {
   // en una nuevas variables separadas, guarda la fecha y hora en string
   let localeDate = timestamp.toLocaleDateString().replace(/\//g, "-");
   let localeTime = timestamp.toLocaleTimeString().replace(/\:/g, "-");
-  console.log(`La descarga has finalizado en ${localeTime}. Se descargaron ${num} tweets.`);
+  console.log(`La descarga has finalizado en ${localeTime}. Se descargaron ${num} tendencias.`);
 
   const csvWriter = createCsvWriter({
   path: `../data/${localeDate}_${localeTime}_${place}_trends.csv`,
@@ -62,13 +62,14 @@ function saveData() {
   }
   csvWriter.writeRecords(records)       // returns a promise
     .then(() => {
-        console.log('...Done');
+        console.log('...csv escrito');
     });
 
   let json = JSON.stringify(dataJSON);
     // console.log(json);
   fs.writeFile(`../data/${localeDate}_${localeTime}_${place}_trends.json`, json, (err) => {
     if (err) throw err;
-    console.log(`Datos de ${num} tweets grabados en ${localeDate}_${query}_tweets.json`);
+    console.log('...JSON escrito');
+    console.log(`Datos de ${num} tendencias grabados en ../data/${localeDate}_${localeTime}_${place}_trends.json y .csv`);
   });
 }
