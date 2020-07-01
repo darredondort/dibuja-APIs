@@ -19,7 +19,7 @@ let maxSize;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight).parent('canvasContainer');
-  loadJSON('https://corona.lmao.ninja/countries', gotData);
+  loadJSON('https://corona.lmao.ninja/v2/countries', gotData);
 }
 
 function draw() {

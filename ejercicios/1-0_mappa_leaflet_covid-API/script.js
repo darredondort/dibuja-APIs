@@ -40,7 +40,7 @@ function setup() {
   myMap = mappa.tileMap(options);
   myMap.overlay(canvas);
 
-  loadJSON('https://corona.lmao.ninja/countries', gotData);
+  loadJSON('https://corona.lmao.ninja/v2/countries', gotData);
   myMap.onChange(drawData);
 }
 
